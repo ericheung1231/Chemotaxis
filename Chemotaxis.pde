@@ -34,48 +34,48 @@
  		myX=x;
  		myY=y;
  		col = color(0,255,255);
- 		scal = (int)(Math.random()*9)+1;
- 		blah = (int)(Math.random()*4);
+ 		scal = (int)(Math.random()*10)+1;
+ 		blah = (int)(Math.random()*4)+1;
 
  	}
  	void move()
  	{
  		if (myX<mouseX)
  		{
- 			myX = myX + ((int)(Math.random()*5)-1)*scal;
+ 			myX = myX + ((int)(Math.random()*11)-4)*scal/3;
  		}
  		if (myX>mouseX)
  		{
- 			myX = myX + ((int)(Math.random()*5)-3)*scal;
+ 			myX = myX + ((int)(Math.random()*11)-6)*scal/3;
  		}
  		if (myY>mouseY)
  		{
- 			myY = myY + ((int)(Math.random()*5)-3)*scal;
+ 			myY = myY + ((int)(Math.random()*11)-6)*scal/3;
  		}
  		if (myY<mouseY)
  		{
- 			myY = myY + ((int)(Math.random()*5)-1)*scal;
+ 			myY = myY + ((int)(Math.random()*11)-4)*scal/3;
  		}
  		if (myY==mouseY)
  		{
- 			myY = myY + ((int)(Math.random()*21)-10)*scal;
+ 			myY = myY + ((int)(Math.random()*21)-10)*scal/3;
  		}
  		if (myX==mouseX)
  		{
- 			myX = myX + ((int)(Math.random()*21)-10)*scal;
+ 			myX = myX + ((int)(Math.random()*21)-10)*scal/3;
  		}
  	}
  	void show()
  	{
  		// fill(col,20);
  		// stroke(col,100);
- 		if (blah == 0)
+ 		if (blah == 1)
  		{
  			fill(col,20);
  			stroke(col,100);
  			rect(myX, myY, scal, scal);	
  		}
- 		if (blah == 1)
+ 		if (blah == 2)
  		{
  			fill(255,255,0,20);
  			stroke(255,255,0,100);
